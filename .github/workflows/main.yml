@@ -41,7 +41,7 @@ jobs:
         uses: docker/setup-buildx-action@v2
 
       - name: Build Docker Image
-        run: docker build -f Dockerfile -t myapp:latest .
+        run: docker build --progress=plain -f Dockerfile -t myapp:latest .
 
       - name: Docker Scout Scan
         run: |
